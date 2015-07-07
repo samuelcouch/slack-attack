@@ -1,6 +1,6 @@
 {
   "name": "pretty-slack",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Use this to post pretty formatted messages to Slack",
   "main": "index.js",
   "scripts": {
