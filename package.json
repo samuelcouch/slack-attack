@@ -1,0 +1,23 @@
+{
+  "name": "pretty-slack",
+  "version": "0.0.1",
+  "description": "Use this to post pretty formatted messages to Slack",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/samuelcouch/pretty-slack.git"
+  },
+  "keywords": [
+    "Slack",
+    "chat"
+  ],
+  "author": "Sam Couch",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/samuelcouch/pretty-slack/issues"
+  },
+  "homepage": "https://github.com/samuelcouch/pretty-slack#readme"
+}
