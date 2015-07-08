@@ -23,5 +23,11 @@
   "homepage": "https://github.com/samuelcouch/pretty-slack#readme",
   "devDependencies": {
     "babel": "^5.6.14"
+  },
+  "dependencies": {
+    "path": "^0.11.14",
+    "request": "^2.58.0",
+    "url": "^0.10.3",
+    "util": "^0.10.3"
   }
 }
