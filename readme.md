@@ -5,7 +5,7 @@ Use this to post pretty messages to Slack using their API.
 `npm install pretty-slack`
 
 ```javascript
-    var PrettySlack = require('pretty-slack');
+    var PrettySlack = require('pretty-slack').PrettySlack;
     var slack = new PrettySlack('<YOUR-API-KEY>');
 
     slack.chat('#<channel>', '<message>', {attachments}, callback);
