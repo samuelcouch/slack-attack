@@ -3,7 +3,7 @@ import Request from 'request'
 import URL from 'url'
 import Util from 'util'
 
-export class PrettySlack {
+export default class PrettySlack {
     constructor(token){
         this.token = token
         this.__uri = {
@@ -26,10 +26,10 @@ export class PrettySlack {
         channel: channel,
         text: message,
         icon_emoji: options.icon_emoji,
-      };
+      }
 
       if (options.attachments instanceof Array)
-        payload.attachments = JSON.stringify(options.attachments);
+        payload.attachments = JSON.stringify(options.attachments)
 
       this.api("chat.postMessage", payload, callback);
     }
@@ -47,9 +47,11 @@ export class PrettySlack {
         Request.get({
             url: this.uri(method, request)
         }, function(err, res, body){
-            if (callback instanceof Function)
-                callback(err, (JSON.parse(body).ok === true))
-        });
+            if (callback instanceof Function){
+              var resp = JSON.parse(body)
+              callback(err, (resp.ok === true), resp)
+            }
+        })
     }
 }
 
