@@ -8,7 +8,7 @@ var Util = require('util')
  * @class
  * @param {string} token
  */
-var PrettySlack = module.exports =  function(token){
+var SlackAttack = module.exports =  function(token){
   /** @member {string} */
   this.token = token
   this.__uri = {
@@ -25,7 +25,7 @@ var PrettySlack = module.exports =  function(token){
  * @param {object} options
  * @param {function} callback
  */
-PrettySlack.prototype.chat = function(channel, message, options, callback){
+SlackAttack.prototype.chat = function(channel, message, options, callback){
   var payload = {
     channel: channel,
     text: message,
@@ -44,7 +44,7 @@ PrettySlack.prototype.chat = function(channel, message, options, callback){
  * @param {object} query
  * @return {string}
  */
-PrettySlack.prototype.uri = function(method, query){
+SlackAttack.prototype.uri = function(method, query){
   var u = Util._extend({}, this.__uri);
   u.pathname = Path.join(u.pathname, method)
   u.query = query || {}
@@ -59,7 +59,7 @@ PrettySlack.prototype.uri = function(method, query){
  * @param {object} request
  * @param {function} callback
  */
-PrettySlack.prototype.api = function(method, request, callback){
+SlackAttack.prototype.api = function(method, request, callback){
   Request.get({
     url: this.uri(method, request)
   }, function(err, res, body){

@@ -1,14 +1,14 @@
-# Pretty-Slack
-Use this to post pretty messages to Slack using their API.
+# :boom: Slack-Attack :metal:
+Use this to as an interface to the Slack web API.
 
 ## Usage
-`npm install pretty-slack`
+`npm install slack-attack`
 
 ```javascript
-    var PrettySlack = require('pretty-slack');
-    var slack = new PrettySlack('<YOUR-API-KEY>');
+    var SlackAttack = require('slack-attack');
+    var slack = new SlackAttack('<YOUR-API-KEY>');
 
-    slack.chat('#<channel>', '<message>', {attachments}, function(err, posted, resp){
+    slack.chat('#<channel>', '<message>', {options}, function(err, posted, resp){
       console.log(err, posted, resp);
     });
 ```
