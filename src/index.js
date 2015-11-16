@@ -29,11 +29,15 @@ SlackAttack.prototype.chat = function(channel, message, options, callback){
   var payload = {
     channel: channel,
     text: message,
-    icon_emoji: options.icon_emoji,
   }
 
-  if (options.attachments instanceof Array)
-    payload.attachments = JSON.stringify(options.attachments)
+  for (var attrname in options) {
+    if (options.attachments instanceof Array) {
+      payload.attachments = JSON.stringify(options.attachments)
+    } else {
+      payload[attrname] = options[attrname];
+    }
+  }
 
   this.api("chat.postMessage", payload, callback);
 }

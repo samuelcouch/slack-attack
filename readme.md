@@ -8,7 +8,12 @@ Use this to as an interface to the Slack web API.
     var SlackAttack = require('slack-attack');
     var slack = new SlackAttack('<YOUR-API-KEY>');
 
-    slack.chat('#<channel>', '<message>', {options}, function(err, posted, resp){
+    var options = { 'username': 'Test Bot',
+                    'icon_emoji': ':robot_face:',
+                    'link_names': 1 };
+
+
+    slack.chat('#<channel>', '<message>', options, function(err, posted, resp){
       console.log(err, posted, resp);
     });
 ```
