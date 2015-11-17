@@ -32,7 +32,7 @@ SlackAttack.prototype.chat = function(channel, message, options, callback){
   }
 
   for (var attrname in options) {
-    if (options.attachments instanceof Array) {
+    if (attrname == "attachments" && options.attachments instanceof Array) {
       payload.attachments = JSON.stringify(options.attachments)
     } else {
       payload[attrname] = options[attrname];
