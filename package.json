@@ -1,6 +1,6 @@
 {
   "name": "slack-attack",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Use this to post pretty formatted messages to Slack",
   "main": "lib/index.js",
   "scripts": {
